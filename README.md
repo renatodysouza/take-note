@@ -28,7 +28,9 @@ OS X & Linux:
 
 ### Prerequisites
 
-- Install [Node.js] which includes [Node Package Manager][npm]
+- Install Node.js which includes 
+
+- Node Package Manager  npm 
 
 
 Run Application
