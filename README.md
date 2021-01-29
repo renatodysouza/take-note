@@ -1,7 +1,6 @@
-# TakeNote
 > Most effective way to take notes
 
-<h1 align="center">Angular Easy Form</h1>
+<h1 align="center">Take Notes</h1>
 
 <p align="center">
   <a href="https://app.circleci.com/pipelines/github/renatodysouza/take-note">
@@ -27,7 +26,10 @@ OS X & Linux:
 
 ## Development setup
 
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
+### Prerequisites
+
+- Install [Node.js] which includes [Node Package Manager][npm]
+
 
 Run Application
 
