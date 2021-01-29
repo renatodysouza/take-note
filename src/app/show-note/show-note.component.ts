@@ -2,6 +2,7 @@ import { MainService } from './../main.service';
 import { ShowNoteService } from './show-note.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Note } from '../interfaces/note';
 
 @Component({
   selector: 'app-shownote',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class ShowNoteComponent implements OnInit {
   panelOpenState = false;
-  allNotes: any;
+  allNotes: Array<Note>;
   searchTerm = '';
   constructor(
     private showNoteService: ShowNoteService,
@@ -30,8 +31,8 @@ export class ShowNoteComponent implements OnInit {
     this.getNotes();
   }
 
-  editNotes(item: any) {
-    this.mainService.setNote(item);
+  editNotes(note: Note) {
+    this.mainService.setNote(note);
     this.router.navigate(['/edit']);
   }
 
@@ -56,7 +57,7 @@ export class ShowNoteComponent implements OnInit {
       if (note.title.includes(term)) {
           return note;
       }
-    }).filter((note: any) => typeof note !== 'undefined');
+    }).filter((note: Note) => typeof note !== 'undefined');
   }
 
 }

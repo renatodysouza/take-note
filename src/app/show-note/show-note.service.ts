@@ -12,7 +12,7 @@ export class ShowNoteService {
   async getNotes() {
     this.db = new Dexie('noteDb');
     this.db.version(2).stores({
-      note: 'title, description'
+      note: '++id,title, description'
     });
     const note = await this.db.note.toArray();
     return note;

@@ -25,4 +25,10 @@ describe('ShowNoteComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should be getNotes called when deleteNotes is called', () => {
+    const spy = spyOn(component, 'getNotes');
+    component.deleteNotes(1);
+    expect(spy).toHaveBeenCalled();
+  });
 });

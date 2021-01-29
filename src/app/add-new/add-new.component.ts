@@ -1,3 +1,4 @@
+import { Note } from './../interfaces/note';
 import { MainService } from './../main.service';
 import { AddNewService } from './add-new.service';
 import { Component, OnInit } from '@angular/core';
@@ -12,7 +13,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class AddNewComponent implements OnInit {
   form: FormGroup;
   error = false;
-  editNoteValue: any;
+  editNoteValue: Note;
   constructor(
     private snackBar: MatSnackBar,
     private addNewService: AddNewService,

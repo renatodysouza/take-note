@@ -15,8 +15,8 @@ describe('MainService', () => {
   });
 
   it('should noteUpdate equal mock when noteUpdate is called', () => {
-    const mock = {id:1};
-    service.setNote({id:1});
+    const mock = {id:1} as any;
+    service.setNote({id:1} as any);
     expect(service.noteUpdate).toEqual(mock);
   });
 });

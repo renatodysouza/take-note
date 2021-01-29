@@ -1,13 +1,14 @@
+import { Note } from './interfaces/note';
 import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MainService {
-  noteUpdate: any;
+  noteUpdate: Note;
   constructor() { }
 
-  setNote(note: any) {
+  setNote(note: Note) {
     this.noteUpdate = note;
   }
 }
