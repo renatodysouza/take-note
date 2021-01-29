@@ -45,6 +45,19 @@ Test Application
    ng test
 ```
 
+Lint Application
+
+```typescript 
+   ng lint
+```
+
+
+## Using Docker
+
+```
+   docker-compose up 
+
+```
 
 
 

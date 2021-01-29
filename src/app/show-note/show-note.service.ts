@@ -6,19 +6,15 @@ import Dexie from '@dpogue/dexie';
 })
 export class ShowNoteService {
   db: any;
-  Dexie: any;
   allnotes: Array<any>;
   constructor() { }
-
-
 
   async getNotes() {
     this.db = new Dexie('noteDb');
     this.db.version(2).stores({
       note: 'title, description'
     });
-    // tslint:disable-next-line: no-string-literal
-    const note = await this.db['note'].toArray();
+    const note = await this.db.note.toArray();
     return note;
   }
 

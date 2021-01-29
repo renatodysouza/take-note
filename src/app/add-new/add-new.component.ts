@@ -26,7 +26,6 @@ export class AddNewComponent implements OnInit {
     this.initForm();
   }
 
-  // tslint:disable-next-line: typedef
   initForm() {
      this.form = this.fb.group({
        title: [this.editNoteValue?.title || '', Validators.required],
@@ -34,7 +33,7 @@ export class AddNewComponent implements OnInit {
      });
   }
 
-  // tslint:disable-next-line: typedef
+  // eslint-disable-next-line
   sendForm() {
     if (this.form.valid) {
       this.choiceWithUpdate();

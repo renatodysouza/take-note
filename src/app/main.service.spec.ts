@@ -13,4 +13,10 @@ describe('MainService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should noteUpdate equal mock when noteUpdate is called', () => {
+    const mock = {id:1};
+    service.setNote({id:1});
+    expect(service.noteUpdate).toEqual(mock);
+  });
 });
