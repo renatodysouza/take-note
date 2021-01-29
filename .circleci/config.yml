@@ -17,4 +17,4 @@ jobs:
       - image: weboaks/node-karma-protractor-chrome
     steps:
       - checkout
-      - run: npm i && npm test --browsers=ChromeNoSandboxHeadless"
+      - run: npm i && npm test --browsers=ChromeNoSandboxHeadless
