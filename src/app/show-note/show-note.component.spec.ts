@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ShowNoteComponent } from './show-note.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('ShowNoteComponent', () => {
   let component: ShowNoteComponent;
@@ -8,7 +9,9 @@ describe('ShowNoteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShowNoteComponent ]
+      declarations: [ ShowNoteComponent ],
+      imports: [RouterTestingModule],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   });
