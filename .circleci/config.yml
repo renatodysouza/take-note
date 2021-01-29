@@ -1,0 +1,20 @@
+version: 2.1
+workflows:
+  testmyapp:
+    jobs:
+      - dependencies
+      - test
+jobs:
+  dependencies:
+    docker:
+      - image: weboaks/node-karma-protractor-chrome
+    steps:
+      - checkout
+      - run: npm i
+
+  test:
+    docker:
+      - image: weboaks/node-karma-protractor-chrome
+    steps:
+      - checkout
+      - run: npm i && npm test

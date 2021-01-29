@@ -1,0 +1,14 @@
+<form class="container-note" [formGroup]="form">
+    <label class="label-note" for="title">Title</label>
+    <mat-form-field appearance="legacy">
+        <input matInput formControlName="title">
+    </mat-form-field>
+    <label class="error" *ngIf="error" for="">Field is required</label>
+    <label class="label-note" for="title">Description</label>
+    <mat-form-field appearance="legacy">
+        <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5" formControlName="description"></textarea>
+    </mat-form-field>
+    <div class="button-save">
+        <button (click)="sendForm()" mat-raised-button color="primary">Save</button>
+    </div>
+</form>

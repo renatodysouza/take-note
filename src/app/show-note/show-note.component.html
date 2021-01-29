@@ -1,0 +1,30 @@
+<div class="search-container ">
+    <mat-form-field class="search-notes">
+        <mat-label>Search</mat-label>
+        <input matInput (keyup)="managerSearchTerm()" [(ngModel)]=" searchTerm ">
+    </mat-form-field>
+</div>
+<div class="content-notes ">
+    <h1>Notes List</h1>
+    <mat-accordion *ngFor="let item of allNotes ">
+        <mat-expansion-panel (opened)="panelOpenState=true " (closed)="panelOpenState=false ">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{item.title | titlecase}}
+                </mat-panel-title>
+                <mat-panel-description>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div class="content-description ">
+                <p>{{item.description}}</p>
+                <div class="content-icons ">
+                    <mat-icon class="edit-icon " (click)="editNotes(item) ">edit</mat-icon>
+                    <mat-icon (click)="deleteNotes(item.id) ">restore_from_trash</mat-icon>
+                </div>
+            </div>
+
+        </mat-expansion-panel>
+    </mat-accordion>
+
+
+</div>
